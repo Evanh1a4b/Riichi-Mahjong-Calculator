@@ -1,0 +1,317 @@
+[
+  {
+    "path": "versions/archives/雀算-iPhone适配版.zip",
+    "bytes": 129127,
+    "sha256": "0fde8f32580c768a458d1955616e7b7b0eaab8927929ac68be52173a3a7a06e3"
+  },
+  {
+    "path": "versions/archives/雀算-包牌比例与犯规版.zip",
+    "bytes": 44136,
+    "sha256": "c837b4aaa056199533693b2dc81d9d845f64dbed7d26b48edee3eee918e07698"
+  },
+  {
+    "path": "versions/archives/雀算-多语言双模式版.zip",
+    "bytes": 41557,
+    "sha256": "e4886c702c43d103f45782c17c0bf6ee04587218590d9b014aa0fbe299c4c7ad"
+  },
+  {
+    "path": "versions/archives/雀算-完整选役版.zip",
+    "bytes": 45985,
+    "sha256": "acc389a3c5b0791ba7f1044b72139f7edbe7bef541245aaf53a460d9bd6f92e3"
+  },
+  {
+    "path": "versions/archives/雀算-日麻计分.zip",
+    "bytes": 46219,
+    "sha256": "d5d0632833dcc9f3a70a82995bd3b00313fd32fb2795831e1802718a8eb647e7"
+  },
+  {
+    "path": "versions/archives/雀算-点差表版.zip",
+    "bytes": 37785,
+    "sha256": "e0b36dc0fc16e14acce464e6b0fe03011e785ad9c5abe07ae283149a400939a7"
+  },
+  {
+    "path": "versions/archives/雀算-点数与顺位结算版.zip",
+    "bytes": 46219,
+    "sha256": "d5d0632833dcc9f3a70a82995bd3b00313fd32fb2795831e1802718a8eb647e7"
+  },
+  {
+    "path": "versions/archives/雀算-犯规继续与过庄版.zip",
+    "bytes": 44817,
+    "sha256": "5a6dfc6a3506ed5c767780df62550b8678a2f578aa1bae5e393dddba02269c9e"
+  },
+  {
+    "path": "versions/archives/雀算-计算与包牌修复版.zip",
+    "bytes": 37065,
+    "sha256": "54dfa56e32d39e2860cf2fcf521c49c010ca5eee2c17a0b819ee40dcdca4f6bc"
+  },
+  {
+    "path": "versions/archives/雀算最新版.zip",
+    "bytes": 139727,
+    "sha256": "9568c43dfe547d281bd5f0807ef4e454a8de79e63b1f5c0ef973489878c56eaa"
+  },
+  {
+    "path": "versions/snapshots/release-v3/app.css",
+    "bytes": 3778,
+    "sha256": "ff66ada466439603d316dea425151bbc3922b1960daeb7e04e9f59f7e994aff4"
+  },
+  {
+    "path": "versions/snapshots/release-v3/app.js",
+    "bytes": 19771,
+    "sha256": "2c18e45ba7badd1ff5bdb285b15132184db5ae68798f1d519ba2121a93070c3b"
+  },
+  {
+    "path": "versions/snapshots/release-v3/direct-engine.js",
+    "bytes": 1181,
+    "sha256": "ae018b3897a6ca9ec32a1510013419201fb81dc0af2d6d51a33fa93bae0d2f4f"
+  },
+  {
+    "path": "versions/snapshots/release-v3/engine.js",
+    "bytes": 11521,
+    "sha256": "034f9934c2e7dd294261ad1e006c337a743a72c5d5d3702a237d25d9cf9f3267"
+  },
+  {
+    "path": "versions/snapshots/release-v3/hand.html",
+    "bytes": 389,
+    "sha256": "0c5240805ed9f275eb264049719b9f387a4d32fac775c74fa9f1d97ff61b2378"
+  },
+  {
+    "path": "versions/snapshots/release-v3/hand.js",
+    "bytes": 7624,
+    "sha256": "754af6e9e9ecdaff3b58cf609ae6711e5d1b33840dddbfde340a1404179a3fb9"
+  },
+  {
+    "path": "versions/snapshots/release-v3/i18n.js",
+    "bytes": 21289,
+    "sha256": "7458cb0d0d09ee5264d24e49ea0ab088b4a9939ca10bd17e2701551a255fb186"
+  },
+  {
+    "path": "versions/snapshots/release-v3/index.html",
+    "bytes": 474,
+    "sha256": "aa8f4972290d6a155f27fcb748cf4bc504a7acd3c4962f344d1397da6bd72ddb"
+  },
+  {
+    "path": "versions/snapshots/release-v3/ledger.js",
+    "bytes": 10431,
+    "sha256": "920a9458206f5c42d904dd9535609859cc9469b45354df0b74acef7d17bd7dde"
+  },
+  {
+    "path": "versions/snapshots/release-v3/manual-engine.js",
+    "bytes": 9486,
+    "sha256": "51987ec96c17b1f19c89f53f5168cfe6e398b37ab2f0c31d9becf5549675b65d"
+  },
+  {
+    "path": "versions/snapshots/release-v3/rules.js",
+    "bytes": 5920,
+    "sha256": "67bcd69c8d0120a3ffce5c2b1d2bea3a478006eea58fb6bb50e602bad98a47d9"
+  },
+  {
+    "path": "versions/snapshots/release-v3/使用说明.md",
+    "bytes": 3952,
+    "sha256": "8c06839f63561910dc38e948b37c82b813ad5f98106288fce5ef1ef7dd843566"
+  },
+  {
+    "path": "versions/snapshots/release-v4/app.css",
+    "bytes": 3778,
+    "sha256": "ff66ada466439603d316dea425151bbc3922b1960daeb7e04e9f59f7e994aff4"
+  },
+  {
+    "path": "versions/snapshots/release-v4/app.js",
+    "bytes": 21231,
+    "sha256": "b870ba92a60c88c47ee227c2aa3393a53af1d5d4e4f3faa3fc6ccdda459e6a9b"
+  },
+  {
+    "path": "versions/snapshots/release-v4/direct-engine.js",
+    "bytes": 1181,
+    "sha256": "ae018b3897a6ca9ec32a1510013419201fb81dc0af2d6d51a33fa93bae0d2f4f"
+  },
+  {
+    "path": "versions/snapshots/release-v4/engine.js",
+    "bytes": 11521,
+    "sha256": "034f9934c2e7dd294261ad1e006c337a743a72c5d5d3702a237d25d9cf9f3267"
+  },
+  {
+    "path": "versions/snapshots/release-v4/hand.html",
+    "bytes": 389,
+    "sha256": "0c5240805ed9f275eb264049719b9f387a4d32fac775c74fa9f1d97ff61b2378"
+  },
+  {
+    "path": "versions/snapshots/release-v4/hand.js",
+    "bytes": 7624,
+    "sha256": "754af6e9e9ecdaff3b58cf609ae6711e5d1b33840dddbfde340a1404179a3fb9"
+  },
+  {
+    "path": "versions/snapshots/release-v4/i18n.js",
+    "bytes": 23535,
+    "sha256": "fb42e832d4d5ff4b7fab31ba883000ae4678352c4eef85119771fd450ad0ab7a"
+  },
+  {
+    "path": "versions/snapshots/release-v4/index.html",
+    "bytes": 474,
+    "sha256": "aa8f4972290d6a155f27fcb748cf4bc504a7acd3c4962f344d1397da6bd72ddb"
+  },
+  {
+    "path": "versions/snapshots/release-v4/ledger.js",
+    "bytes": 11626,
+    "sha256": "fc4e4db48a1c082b25c561e901a19a523ac45e9b21946dac713444f3561a65c1"
+  },
+  {
+    "path": "versions/snapshots/release-v4/manual-engine.js",
+    "bytes": 9486,
+    "sha256": "51987ec96c17b1f19c89f53f5168cfe6e398b37ab2f0c31d9becf5549675b65d"
+  },
+  {
+    "path": "versions/snapshots/release-v4/rules.js",
+    "bytes": 7074,
+    "sha256": "7edb551d014574a7fcfc67af7d825024a8083bb856181d07b3d45ddde5da3719"
+  },
+  {
+    "path": "versions/snapshots/release-v4/使用说明.md",
+    "bytes": 4811,
+    "sha256": "0f6e1cd02993a45726e95096ac3447a761529a4cfd0b0569835152e8f0359a04"
+  },
+  {
+    "path": "versions/snapshots/release-v5/app.css",
+    "bytes": 3778,
+    "sha256": "ff66ada466439603d316dea425151bbc3922b1960daeb7e04e9f59f7e994aff4"
+  },
+  {
+    "path": "versions/snapshots/release-v5/app.js",
+    "bytes": 21843,
+    "sha256": "807e1232fea7ff4d429b03faddd0ae705d72f11ee03364b7e0f87d9f316a1e96"
+  },
+  {
+    "path": "versions/snapshots/release-v5/direct-engine.js",
+    "bytes": 1181,
+    "sha256": "ae018b3897a6ca9ec32a1510013419201fb81dc0af2d6d51a33fa93bae0d2f4f"
+  },
+  {
+    "path": "versions/snapshots/release-v5/engine.js",
+    "bytes": 11521,
+    "sha256": "034f9934c2e7dd294261ad1e006c337a743a72c5d5d3702a237d25d9cf9f3267"
+  },
+  {
+    "path": "versions/snapshots/release-v5/hand.html",
+    "bytes": 389,
+    "sha256": "0c5240805ed9f275eb264049719b9f387a4d32fac775c74fa9f1d97ff61b2378"
+  },
+  {
+    "path": "versions/snapshots/release-v5/hand.js",
+    "bytes": 7624,
+    "sha256": "754af6e9e9ecdaff3b58cf609ae6711e5d1b33840dddbfde340a1404179a3fb9"
+  },
+  {
+    "path": "versions/snapshots/release-v5/i18n.js",
+    "bytes": 24030,
+    "sha256": "3c6e43d23c29a927f614f8d9a4de1360d1f82bdd40045a6fc6ecc1cbb14ba28b"
+  },
+  {
+    "path": "versions/snapshots/release-v5/index.html",
+    "bytes": 474,
+    "sha256": "aa8f4972290d6a155f27fcb748cf4bc504a7acd3c4962f344d1397da6bd72ddb"
+  },
+  {
+    "path": "versions/snapshots/release-v5/ledger.js",
+    "bytes": 12120,
+    "sha256": "52d09f8cadf79d41cc1dd1ab540908f1efcd35e5cf3f9744149a9fd4813b920e"
+  },
+  {
+    "path": "versions/snapshots/release-v5/manual-engine.js",
+    "bytes": 9486,
+    "sha256": "51987ec96c17b1f19c89f53f5168cfe6e398b37ab2f0c31d9becf5549675b65d"
+  },
+  {
+    "path": "versions/snapshots/release-v5/rules.js",
+    "bytes": 7112,
+    "sha256": "6bd8db97a99eefc922378d957c90101b973e2f5e813049624320a1b1123e2647"
+  },
+  {
+    "path": "versions/snapshots/release-v5/使用说明.md",
+    "bytes": 5354,
+    "sha256": "21902b7c58530ef91bd610c62dfb1cab9ebd0004c853aede67657adfeec423f2"
+  },
+  {
+    "path": "versions/snapshots/release-v6/app.css",
+    "bytes": 3778,
+    "sha256": "ff66ada466439603d316dea425151bbc3922b1960daeb7e04e9f59f7e994aff4"
+  },
+  {
+    "path": "versions/snapshots/release-v6/app.js",
+    "bytes": 23568,
+    "sha256": "3ed71dedb6d9aa539600a927f274856a15cf08ad996ced3bad5b21945e8890e6"
+  },
+  {
+    "path": "versions/snapshots/release-v6/direct-engine.js",
+    "bytes": 1181,
+    "sha256": "ae018b3897a6ca9ec32a1510013419201fb81dc0af2d6d51a33fa93bae0d2f4f"
+  },
+  {
+    "path": "versions/snapshots/release-v6/engine.js",
+    "bytes": 11521,
+    "sha256": "034f9934c2e7dd294261ad1e006c337a743a72c5d5d3702a237d25d9cf9f3267"
+  },
+  {
+    "path": "versions/snapshots/release-v6/hand.html",
+    "bytes": 389,
+    "sha256": "0c5240805ed9f275eb264049719b9f387a4d32fac775c74fa9f1d97ff61b2378"
+  },
+  {
+    "path": "versions/snapshots/release-v6/hand.js",
+    "bytes": 7624,
+    "sha256": "754af6e9e9ecdaff3b58cf609ae6711e5d1b33840dddbfde340a1404179a3fb9"
+  },
+  {
+    "path": "versions/snapshots/release-v6/i18n.js",
+    "bytes": 25416,
+    "sha256": "87bea1a74b1ff28f3205879127380f5d7cd7c931c7fd29abc4b17b792b787294"
+  },
+  {
+    "path": "versions/snapshots/release-v6/index.html",
+    "bytes": 474,
+    "sha256": "aa8f4972290d6a155f27fcb748cf4bc504a7acd3c4962f344d1397da6bd72ddb"
+  },
+  {
+    "path": "versions/snapshots/release-v6/ledger.js",
+    "bytes": 12597,
+    "sha256": "080b13d74ef3f312883b3722a3481a6be7e10c6fe8aebc2f3bb19f9bdc5e6223"
+  },
+  {
+    "path": "versions/snapshots/release-v6/manual-engine.js",
+    "bytes": 9486,
+    "sha256": "51987ec96c17b1f19c89f53f5168cfe6e398b37ab2f0c31d9becf5549675b65d"
+  },
+  {
+    "path": "versions/snapshots/release-v6/rules.js",
+    "bytes": 7112,
+    "sha256": "6bd8db97a99eefc922378d957c90101b973e2f5e813049624320a1b1123e2647"
+  },
+  {
+    "path": "versions/snapshots/release-v6/使用说明.md",
+    "bytes": 5825,
+    "sha256": "b07806a952d62030d209563f7622e13fbf64b317d297ee595a72ddce6754ce57"
+  },
+  {
+    "path": "versions/web-deployments/hosted-riichi-comeback.tar.gz",
+    "bytes": 49324,
+    "sha256": "a5ec1f87451478b23b6ec54e621ce6caef74483fd74b5f296dc29679ebe6d55c"
+  },
+  {
+    "path": "versions/web-deployments/hosted-riichi-desktop.tar.gz",
+    "bytes": 46231,
+    "sha256": "00ed088a3b4ee7089b5471e84a726ae1d0516fc36f5cd852876584b81d587480"
+  },
+  {
+    "path": "versions/web-deployments/hosted-riichi-south4.tar.gz",
+    "bytes": 49466,
+    "sha256": "24407bef124054e9c7deccbfe39c08223e8c3edd58ae1fd238d1e16c9efe796f"
+  },
+  {
+    "path": "versions/web-deployments/hosted-riichi-west.tar.gz",
+    "bytes": 49601,
+    "sha256": "071a4e1994487cf7cd01a3f6d417ac3073fa62d3e78db61574d9a7b39f2b4c70"
+  },
+  {
+    "path": "versions/web-deployments/hosted-riichi.tar.gz",
+    "bytes": 45565,
+    "sha256": "688a1d682b2d21b1d2df3e8def9c2f5f9c725d822f9235133ceb6ea07b07580f"
+  }
+]

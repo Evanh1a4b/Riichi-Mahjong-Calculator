@@ -1,0 +1,9 @@
+const assert=require('assert/strict'),T=require('../app/ledger'),R=require('../app/rules'),boot=require('./dom-harness.cjs');
+T.configure({...R.custom,foulReplay:false,tobi:'off',drawRepeat:'always'});let s=T.riichi(T.fresh(),0);s=T.foul(s,0,'other');assert.equal(s.dealer,0);assert.equal(s.hand,0);assert(s.blocked[0]);assert.equal(s.pot,1);assert.throws(()=>T.win(s,0,1,false,{base:1000}),/foulBlocked/);assert.throws(()=>T.riichi(s,0),/foulBlocked/);assert.throws(()=>T.multiWin(s,[{w:0,r:{base:1000}}],1),/foulBlocked/);assert.throws(()=>T.nagashi(s,[true,false,false,false],[true,false,false,false]),/foulBlocked/);
+let n=T.draw(s,[true,true,false,false]);assert.equal(n.dealer,1);assert.equal(n.hand,1);assert.equal(n.points[0],s.points[0]-1000);assert.equal(n.points[1],s.points[1]+3000);assert(n.blocked.every(v=>!v));assert(T.check(n));assert(T.undo(n).blocked[0]);
+n=T.win(s,2,1,false,{base:1000});assert.equal(n.dealer,1);assert(n.blocked.every(v=>!v));
+let b=T.foul(T.fresh(),2,'other');n=T.draw(b,[true,false,true,false]);assert.equal(n.dealer,0);assert.equal(n.points[2],b.points[2]-1000);assert(n.blocked.every(v=>!v));
+T.configure({...R.custom,foulReplay:true,foulRefundRiichi:true,tobi:'off'});n=T.foul(s,1,'other');assert(n.blocked.every(v=>!v));assert.equal(n.pot,0);assert.equal(n.dealer,0);
+const a=boot();a.click('foulsettle');assert(a.els.app.innerHTML.includes('本局不能和牌'));assert(a.els.settle.disabled);assert.equal(a.els.winner.value,'0');a.change('winner','1');a.change('loser','0');assert(!a.els.settle.disabled);a.click('settle');let saved=JSON.parse(a.storage['riichi-table-v1']);assert.equal(saved.dealer,1);assert(saved.blocked.every(v=>!v));a.click('undo');assert(JSON.parse(a.storage['riichi-table-v1']).blocked[0]);
+console.log('Foul continuation passed: no win/riichi/nagashi/multi-ron, forced noten, dealer rotation at hand end, next-hand release, replay/refund, undo and UI blocking.');
+

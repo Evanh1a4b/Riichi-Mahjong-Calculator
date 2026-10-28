@@ -1,0 +1,10 @@
+(function(root){
+function solve(s,rules,player,target=1,allowTie=false){if(!Number.isInteger(player)||player<0||player>3||![1,2,3].includes(target))throw Error('invalid');if(s.blocked?.[player])throw Error('foulBlocked');const D=root.DirectRiichi,T=root.TableEngine;T.configure(rules);const rank=points=>{if(!allowTie)return 1+points.filter((p,i)=>i!==player&&p>=points[player]).length;const sorted=points.map((p,i)=>({p,i})).sort((a,b)=>b.p-a.p||a.i-b.i);return rules.tieSplit?sorted.findIndex(x=>x.p===points[player])+1:sorted.findIndex(x=>x.i===player)+1;};const currentRank=rank(s.points),scenarios=[];
+for(const loser of [-1,...[0,1,2,3].filter(i=>i!==player)]){const tsumo=loser===-1,all=[];for(const fu of [20,25,30,40,50,60,70,80,90,100,110])for(let han=1;han<=(rules.kazoe&&rules.kazoeMultiple?100:13);han++){if(tsumo&&fu===110&&han<3)continue;try{const r=D.calculate({...rules,seat:27+(player-s.dealer+4)%4,han,fu,tsumo,honba:s.honba,sticks:s.pot}),delta=T.transfers(s,player,tsumo?0:loser,tsumo,r),points=s.points.map((p,i)=>p+delta[i]);if(rank(points)<=target){all.push({han,fu,base:r.base,limit:r.limit,delta,points,rank:rank(points),received:delta[player],yakuman:0});break;}}catch{}}
+let frontier=all.filter(a=>!all.some(b=>b!==a&&b.han<=a.han&&b.fu<=a.fu&&(b.han<a.han||b.fu<a.fu))).sort((a,b)=>a.han-b.han||a.fu-b.fu);
+// Actual yakuman remain available even when counted yakuman is disabled.
+let yakuman=null;const max=rules.stackYakuman?(rules.doubleYakuman?6:4):rules.doubleYakuman?2:1;for(let n=1;n<=max;n++){const r={base:8000*n,yakuman:n},delta=T.transfers(s,player,tsumo?0:loser,tsumo,r),points=s.points.map((p,i)=>p+delta[i]);if(rank(points)<=target){yakuman={yakuman:n,delta,points,rank:rank(points),received:delta[player]};break;}}
+scenarios.push({tsumo,loser,conditions:frontier,yakuman,repeat:player===s.dealer&&rules.winRepeat});}
+return {player,target,allowTie,currentRank,already:currentRank<=target,scenarios};}
+root.Comeback={solve};if(typeof module!=='undefined')module.exports=root.Comeback;
+})(typeof window!=='undefined'?window:globalThis);

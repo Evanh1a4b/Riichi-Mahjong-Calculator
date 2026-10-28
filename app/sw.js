@@ -1,0 +1,5 @@
+const CACHE='riichi-iphone-v5';
+const ASSETS=['./comeback.js','./desktop.html','./desktop.css','./','./index.html','./app.css','./app.js','./i18n.js','./rules.js','./engine.js','./manual-engine.js','./direct-engine.js','./ledger.js','./hand.html','./hand.js','./ios-compat.js','./manifest.webmanifest','./icon-180.png','./icon-192.png','./icon-512.png'];
+self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS))));
+self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('riichi-iphone-')&&k!==CACHE).map(k=>caches.delete(k))))));
+self.addEventListener('fetch',e=>{if(e.request.method!=='GET'||new URL(e.request.url).origin!==self.location.origin)return;e.respondWith(fetch(e.request).then(r=>{if(r.ok&&ASSETS.some(a=>new URL(a,self.registration.scope).href===e.request.url)){const copy=r.clone();e.waitUntil(caches.open(CACHE).then(c=>c.put(e.request,copy)));}return r;}).catch(()=>caches.match(e.request).then(r=>r||Response.error())));});

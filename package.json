@@ -1,0 +1,12 @@
+{
+  "name": "riichi-mahjong-calculator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Riichi Mahjong Calculator / 雀算：四人立直麻将计分与牌桌管理",
+  "scripts": {
+    "test": "node tests/run.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
