@@ -7,6 +7,7 @@ const catalog=[
 ['kokushi','国士无双',0,0,'役满','十三种幺九加一对'],['kokushi13','国士无双十三面',0,0,'役满','国士原为十三面听牌'],['suuankou','四暗刻',0,0,'役满','四暗刻，双碰仅自摸成立'],['suuankouSingle','四暗刻单骑',0,0,'役满','四暗刻单骑雀头'],['daisangen','大三元',0,0,'役满','三组三元刻子或杠'],['shousuushi','小四喜',0,0,'役满','三组风刻与风雀头'],['daisuushi','大四喜',0,0,'役满','四组风刻或杠'],['tsuuiisou','字一色',0,0,'役满','全部为字牌'],['chinroutou','清老头',0,0,'役满','全部为数牌1与9'],['ryuuiisou','绿一色',0,0,'役满','只含23468索和发'],['chuuren','九莲宝灯',0,0,'役满','同花色1112345678999加一张'],['pureChuuren','纯正九莲宝灯',0,0,'役满','和牌前为九面听'],['suukantsu','四杠子',0,0,'役满','四组杠'],['tenhou','天和',0,0,'役满','庄家配牌和牌'],['chiihou','地和',0,0,'役满','闲家无鸣牌中断的首次自摸和牌']
 ];
 const byId=Object.fromEntries(catalog.map(x=>[x[0],x]));
+function requiresClosed(id){const y=byId[id];return !!y&&(y[4]!=='役满'&&!y[3]||['kokushi','kokushi13','suuankou','suuankouSingle','chuuren','pureChuuren','tenhou','chiihou'].includes(id));}
 function validateCombinations(ids,o,partial=false){const has=id=>ids.has(id);for(const id of ids)if(!byId[id])throw Error('未知役种。');
 const conflict=(...a)=>{if(a.filter(has).length>1)throw Error(a.filter(has).map(id=>byId[id][1]).join('、')+'不能同时勾选。');};
 for(const g of [['riichi','doubleRiichi'],['iipeikou','ryanpeikou'],['honitsu','chinitsu'],['chanta','junchan','honroutou'],['kokushi','kokushi13'],['suuankou','suuankouSingle'],['shousuushi','daisuushi'],['chuuren','pureChuuren'],['tenhou','chiihou'],['haitei','houtei','rinshan','chankan','tenhou','chiihou']])conflict(...g);
@@ -22,7 +23,7 @@ noShape('sanshoku',['honitsu','chinitsu','ittsuu']);noShape('sanshokuTrip',['hon
 }
 function calculate(o){o={ids:[],closed:true,tsumo:false,fu:30,dora:0,ura:0,red:0,seat:28,round:27,honba:0,sticks:0,kazoe:true,kazoeMultiple:false,doubleYakuman:true,stackYakuman:true,kiriage:false,kuitan:true,redDora:true,uraDora:true,ippatsuAllowed:true,doubleRiichiAllowed:true,honbaValue:300,redM:1,redP:1,redS:1,...o};const ids=new Set(o.ids),has=id=>ids.has(id);if(!ids.size)throw Error('请至少勾选一个役，宝牌不能单独和牌。');for(const id of ids)if(!byId[id])throw Error('未知役种。');
 validateCombinations(ids,o);
-if(!o.closed)for(const id of ids)if(byId[id][4]!=='役满'&&!byId[id][3]||['kokushi','kokushi13','suuankou','suuankouSingle','chuuren','pureChuuren','tenhou','chiihou'].includes(id))throw Error(byId[id][1]+'要求门清。');
+if(!o.closed)for(const id of ids)if(requiresClosed(id))throw Error(byId[id][1]+'要求门清。');
 if(has('ippatsu')&&(!has('riichi')&&!has('doubleRiichi')))throw Error('一发需要立直或两立直。');if(has('ippatsu')&&!o.ippatsuAllowed)throw Error('当前规则关闭一发。');if(has('doubleRiichi')&&!o.doubleRiichiAllowed)throw Error('当前规则关闭两立直。');if(has('tanyao')&&!o.closed&&!o.kuitan)throw Error('当前规则关闭食断。');
 if(['tsumo','haitei','rinshan','tenhou','chiihou','suuankou'].some(has)&&!o.tsumo)throw Error('所选役种要求自摸；四暗刻荣和应选单骑。');if(['houtei','chankan'].some(has)&&o.tsumo)throw Error('河底／抢杠要求荣和。');if(has('tenhou')&&o.seat!==27||has('chiihou')&&o.seat===27)throw Error('天和仅限庄家，地和仅限闲家。');if(has('ippatsu')&&has('rinshan'))throw Error('开杠会中断一发。');
 const ym=[...ids].filter(id=>byId[id][4]==='役满').map(id=>({name:byId[id][1],mult:o.doubleYakuman&&['kokushi13','suuankouSingle','daisuushi','pureChuuren'].includes(id)?2:1}));
@@ -34,6 +35,6 @@ const han=yaku.reduce((a,x)=>a+x.han,0),yakuman=o.stackYakuman?ym.reduce((a,x)=>
 const ceil=n=>Math.ceil(n/100)*100;let total,payments;if(o.tsumo){let a=ceil(base*2)+o.honba*o.honbaValue/3,b=ceil(base)+o.honba*o.honbaValue/3;total=o.seat===27?a*3:a+2*b;payments=o.seat===27?'每家支付 '+a+' 点':'庄家支付 '+a+' 点，另外两家各 '+b+' 点';}else{total=ceil(base*(o.seat===27?6:4))+o.honba*o.honbaValue;payments='放铳者支付 '+total+' 点';}total+=o.sticks*1000;
 return {base,han,fu,yaku,yakuman,ym,details,limit,total,payments,closed:o.closed,manual:true,groups:[],meldInfo:[],alternatives:1,wait:'',special:'manual'};
 }
-function compatible(ids,o={}){try{validateCombinations(new Set(ids),{seat:28,round:27,...o},true);return true;}catch{return false;}}
-root.ManualRiichi={catalog,calculate,compatible};if(typeof module!=='undefined')module.exports=root.ManualRiichi;
+function compatible(ids,o={}){try{if(o.closed===false&&[...ids].some(requiresClosed))return false;validateCombinations(new Set(ids),{seat:28,round:27,...o},true);return true;}catch{return false;}}
+root.ManualRiichi={catalog,calculate,compatible,requiresClosed};if(typeof module!=='undefined')module.exports=root.ManualRiichi;
 })(typeof window!=='undefined'?window:globalThis);
