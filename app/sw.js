@@ -1,4 +1,4 @@
-const CACHE='riichi-iphone-v8';
+const CACHE='riichi-iphone-v9';
 const ASSETS=['./comeback.js','./desktop.html','./desktop.css','./','./index.html','./app.css','./app.js','./i18n.js','./rules.js','./engine.js','./manual-engine.js','./direct-engine.js','./ledger.js','./hand.html','./hand.js','./ios-compat.js','./manifest.webmanifest','./icon-180.png','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS))));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('riichi-iphone-')&&k!==CACHE).map(k=>caches.delete(k))))));
