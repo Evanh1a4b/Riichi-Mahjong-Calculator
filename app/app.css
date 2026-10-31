@@ -27,3 +27,5 @@ nav,.tabs{flex-wrap:wrap}#tooldialog{width:min(1100px,94vw)}
 .yaku-item.yaku-unavailable{background:#eeeee8;border-color:#d8d9d1;color:#7c8176;cursor:not-allowed}.yaku-unavailable span{opacity:.65}.yaku-unavailable input{cursor:not-allowed}
 
 .total-audit{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border:1px solid;border-radius:10px;padding:12px;margin:14px 0}.total-audit p{font-size:13px;line-height:1.6;margin:5px 0;overflow-wrap:anywhere}.audit-ok{background:#edf6eb;border-color:#b4cfad}.audit-error{background:#fff0e9;border-color:#d68b6f;color:#8b3026}.adjust-buttons{display:flex;gap:6px;margin:6px 0}.adjust-buttons button{flex:1}#adjustmentPanel input[type=text]{margin-bottom:12px}
+
+.adjust-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.adjust-buttons button{min-width:0}
