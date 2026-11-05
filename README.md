@@ -2,7 +2,7 @@
 
 **雀算：四人立直麻将算番、算符、全场记分与逆转条件计算工具。** 支持电脑和 iPhone 界面，使用原生 HTML、CSS、JavaScript，无需安装依赖。
 
-[电脑版网站](https://riichi-score-evans.plumbloom36.chatgpt.site/desktop.html) · [手机版网站](https://riichi-score-evans.plumbloom36.chatgpt.site/) · [完整说明](docs/使用说明.md)
+[电脑版网站](https://riichi-score-evans.evan-ucsd.chatgpt.site/desktop.html) · [手机版网站](https://riichi-score-evans.evan-ucsd.chatgpt.site/) · [完整说明](docs/使用说明.md)
 
 ## 功能
 
